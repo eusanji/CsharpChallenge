@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsView.TelasCliente
 {
-    partial class frmCadastro
+    partial class FrmCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCadastroSair = new System.Windows.Forms.Button();
             this.mtbCadastroTelefone = new System.Windows.Forms.MaskedTextBox();
             this.nudCadastroIdade = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.nudCadastroIdade)).BeginInit();
@@ -42,7 +42,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(73, 166);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 156);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(70, 23);
             this.btnSalvar.TabIndex = 0;
@@ -88,28 +88,30 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(273, 166);
+            this.btnLimpar.Location = new System.Drawing.Point(259, 156);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(70, 23);
             this.btnLimpar.TabIndex = 8;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // btnCancelar
+            // btnCadastroSair
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(174, 166);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(70, 23);
-            this.btnCancelar.TabIndex = 9;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCadastroSair.Location = new System.Drawing.Point(103, 156);
+            this.btnCadastroSair.Name = "btnCadastroSair";
+            this.btnCadastroSair.Size = new System.Drawing.Size(135, 23);
+            this.btnCadastroSair.TabIndex = 9;
+            this.btnCadastroSair.Text = "Cancelar ou Sair";
+            this.btnCadastroSair.UseVisualStyleBackColor = true;
+            this.btnCadastroSair.Click += new System.EventHandler(this.btnCadastroSair_Click);
             // 
             // mtbCadastroTelefone
             // 
             this.mtbCadastroTelefone.Location = new System.Drawing.Point(73, 108);
-            this.mtbCadastroTelefone.Mask = "00-0000-0000";
+            this.mtbCadastroTelefone.Mask = "0000000000";
             this.mtbCadastroTelefone.Name = "mtbCadastroTelefone";
-            this.mtbCadastroTelefone.Size = new System.Drawing.Size(100, 20);
+            this.mtbCadastroTelefone.Size = new System.Drawing.Size(70, 20);
             this.mtbCadastroTelefone.TabIndex = 10;
             // 
             // nudCadastroIdade
@@ -124,21 +126,21 @@
             this.nudCadastroIdade.Size = new System.Drawing.Size(44, 20);
             this.nudCadastroIdade.TabIndex = 11;
             // 
-            // frmCadastro
+            // FrmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 214);
             this.Controls.Add(this.nudCadastroIdade);
             this.Controls.Add(this.mtbCadastroTelefone);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnCadastroSair);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvar);
-            this.Name = "frmCadastro";
+            this.Name = "FrmCadastro";
             this.Text = "Cadastro de Cliente";
             ((System.ComponentModel.ISupportInitialize)(this.nudCadastroIdade)).EndInit();
             this.ResumeLayout(false);
@@ -154,7 +156,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnCadastroSair;
         private System.Windows.Forms.MaskedTextBox mtbCadastroTelefone;
         private System.Windows.Forms.NumericUpDown nudCadastroIdade;
     }

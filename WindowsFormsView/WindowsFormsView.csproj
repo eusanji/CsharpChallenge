@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListarClientesOrdenadosViewModel.cs" />
+    <Compile Include="ListarTodosViewModel.cs" />
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,17 +62,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelasCliente\frmCadastro.cs">
+    <Compile Include="TelasCliente\FrmCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelasCliente\frmCadastro.Designer.cs">
-      <DependentUpon>frmCadastro.cs</DependentUpon>
+    <Compile Include="TelasCliente\FrmCadastro.Designer.cs">
+      <DependentUpon>FrmCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelasCliente\frmExclui.cs">
+    <Compile Include="TelasCliente\FrmExclui.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelasCliente\frmExclui.Designer.cs">
-      <DependentUpon>frmExclui.cs</DependentUpon>
+    <Compile Include="TelasCliente\FrmExclui.Designer.cs">
+      <DependentUpon>FrmExclui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelasCliente\FrmListarOrdenado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelasCliente\FrmListarOrdenado.Designer.cs">
+      <DependentUpon>FrmListarOrdenado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelasCliente\FrmListarTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelasCliente\FrmListarTodos.Designer.cs">
+      <DependentUpon>FrmListarTodos.cs</DependentUpon>
     </Compile>
     <Compile Include="TelasCliente\frmOpcoesClientes.cs">
       <SubType>Form</SubType>
@@ -90,11 +104,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TelasCliente\frmCadastro.resx">
-      <DependentUpon>frmCadastro.cs</DependentUpon>
+    <EmbeddedResource Include="TelasCliente\FrmCadastro.resx">
+      <DependentUpon>FrmCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelasCliente\frmExclui.resx">
-      <DependentUpon>frmExclui.cs</DependentUpon>
+    <EmbeddedResource Include="TelasCliente\FrmExclui.resx">
+      <DependentUpon>FrmExclui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelasCliente\FrmListarOrdenado.resx">
+      <DependentUpon>FrmListarOrdenado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelasCliente\FrmListarTodos.resx">
+      <DependentUpon>FrmListarTodos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelasCliente\FrmOpcoesClientes.resx">
       <DependentUpon>frmOpcoesClientes.cs</DependentUpon>

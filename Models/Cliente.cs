@@ -11,9 +11,9 @@ namespace Models
     {
         [Key]
         public int IdCliente { get; set; }
-        private int idade;
+    
         public int Idade { get; set; }
-        private string telefone;
+   
         public string Telefone { get; set; }
 
         [Required]

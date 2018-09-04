@@ -1,37 +1,55 @@
 ﻿using Controllers.DAL;
 using Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Controllers
 {
+    /// <summary>
+    /// Esta classe é responsavel de acões do cliente 
+    /// </summary>
     public class ClientesController
     {
+        /// <summary>
+        ///  Criando uma instância para conexao com o DB
+        /// </summary>
         Contexto contexto = new Contexto();
-        //Criando uma instância para conexao com o BD
-
+        
+        /// <summary>
+        /// Cadastra um novo cliente no DB
+        /// </summary>
+        /// <param name="novoCliente"></param>
         public void CadastrarCliente(Cliente novoCliente)
         {
             contexto.Clientes.Add(novoCliente);
             contexto.SaveChanges();            
         }
-
-        public void BuscarID()
+        /// <summary>
+        /// Lista todos os clientes do DB
+        /// </summary>
+        /// <returns></returns>
+        public List<Cliente> listarTodos()
         {
-
+            return contexto.Clientes.ToList();
         }
-
-        public void BuscarNome()
+        /// <summary>
+        /// Procura um cliente através do seu Id, no DB
+        /// </summary>
+        /// <param name="idcliente"></param>
+        /// <returns></returns>
+        public Cliente BuscarID(int idcliente)
         {
-
+            return contexto.Clientes.Find(idcliente);
         }
-
-        public void ExcluirClientes()
+        /// <summary>
+        /// Exclui um cliente através do seu Id, no DB
+        /// </summary>
+        /// <param name="idcliente"></param>
+        public void ExcluirClientesID(int idcliente)
         {
-
+            Cliente cliente = BuscarID(idcliente);
+            contexto.Clientes.Remove(cliente);
+            contexto.SaveChanges();
         }
 
     }
